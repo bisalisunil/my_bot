@@ -1,0 +1,63 @@
+[0.028s] Invoking command in '/home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sunil-ubuntu/test_ws/install/test_bot:/home/sunil-ubuntu/navigation2_tutorials/nav2_gps_waypoint_follower_demo/install/nav2_gps_waypoint_follower_demo:/home/sunil-ubuntu/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/sunil-ubuntu/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot
+[0.188s] -- The C compiler identification is GNU 11.4.0
+[0.330s] -- The CXX compiler identification is GNU 11.4.0
+[0.352s] -- Detecting C compiler ABI info
+[0.512s] -- Detecting C compiler ABI info - done
+[0.537s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.538s] -- Detecting C compile features
+[0.539s] -- Detecting C compile features - done
+[0.547s] -- Detecting CXX compiler ABI info
+[0.722s] -- Detecting CXX compiler ABI info - done
+[0.741s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.742s] -- Detecting CXX compile features
+[0.743s] -- Detecting CXX compile features - done
+[0.756s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.143s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.236s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.337s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.495s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.510s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.510s] -- Configured cppcheck include dirs: 
+[1.510s] -- Configured cppcheck exclude dirs and/or files: 
+[1.525s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.525s] -- Configured cpplint exclude dirs and/or files: 
+[1.528s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.532s] -- Added test 'lint_cmake' to check CMake code style
+[1.535s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.551s] -- Added test 'uncrustify' to check C / C++ code style
+[1.551s] -- Configured uncrustify additional arguments: 
+[1.554s] -- Added test 'xmllint' to check XML markup files
+[1.556s] -- Configuring done
+[1.561s] -- Generating done
+[1.562s] -- Build files have been written to: /home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot
+[1.569s] Invoked command in '/home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sunil-ubuntu/test_ws/install/test_bot:/home/sunil-ubuntu/navigation2_tutorials/nav2_gps_waypoint_follower_demo/install/nav2_gps_waypoint_follower_demo:/home/sunil-ubuntu/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/sunil-ubuntu/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot
+[1.573s] Invoking command in '/home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sunil-ubuntu/test_ws/install/test_bot:/home/sunil-ubuntu/navigation2_tutorials/nav2_gps_waypoint_follower_demo/install/nav2_gps_waypoint_follower_demo:/home/sunil-ubuntu/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot -- -j16 -l16
+[1.636s] Invoked command in '/home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sunil-ubuntu/test_ws/install/test_bot:/home/sunil-ubuntu/navigation2_tutorials/nav2_gps_waypoint_follower_demo/install/nav2_gps_waypoint_follower_demo:/home/sunil-ubuntu/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot -- -j16 -l16
+[1.701s] Invoking command in '/home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sunil-ubuntu/test_ws/install/test_bot:/home/sunil-ubuntu/navigation2_tutorials/nav2_gps_waypoint_follower_demo/install/nav2_gps_waypoint_follower_demo:/home/sunil-ubuntu/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot
+[1.719s] -- Install configuration: ""
+[1.720s] -- Execute custom install script
+[1.721s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/empty.yaml
+[1.740s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/gazebo_control.xacro
+[1.755s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/inertial_macros.xacro
+[1.770s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[1.794s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/robot_core.xacro
+[1.819s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/launch/launch_sim.launch.py
+[1.834s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/launch/rsp.launch.py
+[1.857s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/worlds/empty.world
+[1.881s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/worlds/obstacles.world
+[1.904s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[1.928s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[1.944s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[1.967s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[1.990s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.sh
+[2.013s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.dsv
+[2.037s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.bash
+[2.060s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.sh
+[2.075s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.zsh
+[2.095s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.dsv
+[2.118s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/package.dsv
+[2.143s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[2.166s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[2.190s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[2.213s] -- Symlinking: /home/sunil-ubuntu/dev_ws/src/my_bot/install/my_bot/share/my_bot/package.xml
+[2.243s] Invoked command in '/home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sunil-ubuntu/test_ws/install/test_bot:/home/sunil-ubuntu/navigation2_tutorials/nav2_gps_waypoint_follower_demo/install/nav2_gps_waypoint_follower_demo:/home/sunil-ubuntu/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/sunil-ubuntu/dev_ws/src/my_bot/build/my_bot

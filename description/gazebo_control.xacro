@@ -26,13 +26,13 @@
          <left_joint>back_left_wheel_joint</left_joint>
          <right_joint>back_right_wheel_joint</right_joint>
 
-         <wheel_separation>0.66</wheel_separation>
-         <wheel_separation>0.66</wheel_separation>
+         <wheel_separation>0.730</wheel_separation>
+         <wheel_separation>0.730</wheel_separation>
 
          <wheel_diameter>0.25</wheel_diameter>
          <wheel_diameter>0.25</wheel_diameter>
 
-         <max_wheel_torque>20</max_wheel_torque>
+         <max_wheel_torque>5</max_wheel_torque>
          <max_wheel_acceleration>1.0</max_wheel_acceleration>
 
          <publish_odom>true</publish_odom>

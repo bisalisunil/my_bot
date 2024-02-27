@@ -1,0 +1,284 @@
+<!-- This is the same turtlebot model in nav2 with the following changes -->
+<!-- 1. A GPS sensor is added -->
+<!-- 2. A link for the GPS sensor is added -->
+<!-- 3. The diff drive plugin does not publish the tf between odom->base_footprint, which is done by RL -->
+
+<?xml version="1.0"?>
+<sdf version="1.6">
+    <model name="my_bot"> 
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+      <!-- BASE LINK -->
+
+      <link name="base_footprint">
+
+      </link>
+
+
+      <!-- CHASSIS LINK -->
+
+      <joint name="base_joint" type="fixed">
+          <parent>base_footprint</parent>
+          <child>base_link</child>
+          <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <link name="base_link">
+        <visual name="vis"> 
+            <pose>0.0 0.0 0.135 0 0 0</pose>
+            <geometry>
+              <box> 
+                  <size>0.6 0.6 0.27</size>
+              </box> 
+            </geometry>
+        </visual>
+        <collision name="col"> 
+            <pose>0.0 0.0 0.135 0 0 0</pose>
+            <geometry>
+                <box> 
+                  <size>0.6 0.6 0.27</size>
+                </box> 
+            </geometry>
+        </collision>
+        <inertial>
+        <pose>0.0 0.0 0.135 0 0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.3</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.3</iyy>
+          <iyz>0</iyz>
+          <izz>0.15</izz>
+        </inertia>
+	    </inertial>
+    </link>
+       
+    
+      <joint name="back_left_wheel_joint" type="revolute">
+        <parent>base_link</parent>
+		  	<child>back_left_wheel</child>
+        <pose>-0.175 0.33 0.0 -1.571 0 0</pose>
+        <axis>
+				<xyz>0 0 1</xyz>
+			  </axis>
+      </joint>
+
+    <link name="back_left_wheel">
+        <visual name="vis"> 
+            <pose>-0.175 0.33 0.0 -1.571 0 0</pose>
+
+            <geometry>
+                <cylinder>
+                  <radius>0.125</radius>
+                  <length>0.04</length>
+                </cylinder>
+            </geometry>
+        </visual>
+        <collision name="col">
+          <pose>-0.175 0.33 0.0 -1.571 0 0</pose> 
+            <geometry>
+                <sphere> 
+                  <radius>0.125</radius>
+                </sphere>
+            </geometry>
+        </collision>
+        <inertial>
+	      	<pose>-0.175 0.33 0.0 -1.571 0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.00818088481028512</ixx>
+          <ixy>8.31221665572211E-19</ixy>
+          <ixz>1.55058808778393E-19</ixz>
+          <iyy>0.00818088481028512</iyy>
+          <iyz>2.65575231975444E-17</iyz>
+          <izz>0.0158038579869233</izz>
+        </inertia>
+	    </inertial>
+    </link>
+    <joint name="front_left_wheel_joint" type="revolute">
+        <pose>0.175 0.33 0 -1.571 0.0 0.0</pose>
+	    	<parent>base_link</parent>
+		  	<child>front_left_wheel</child>
+        <axis>
+				  <xyz>0 0 1</xyz>
+			  </axis>
+    </joint>
+
+    <link name="front_left_wheel">
+        <visual name="vis">
+            <pose>0.175 0.33 0 -1.571 0.0 0.0</pose> 
+            <geometry>
+                <cylinder>
+                  <radius>0.125</radius>
+                  <length>0.04</length>
+                </cylinder>
+            </geometry>
+        </visual>
+        <collision name="col"> 
+            <pose>0.175 0.33 0 -1.571 0.0 0.0</pose>
+            <geometry>
+                <sphere> 
+                  <radius>0.125</radius>
+                </sphere>
+            </geometry>
+        </collision>
+        <inertial>
+          <pose>0.175 0.33 0 -1.571 0.0 0.0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.00818088481028512</ixx>
+            <ixy>1.17455235352596E-18</ixy>
+            <ixz>5.62382982653917E-20</ixz>
+            <iyy>0.00818088481028512</iyy>
+            <iyz>2.65575231975444E-17</iyz>
+            <izz>0.0158038579869233</izz>
+          </inertia>
+	    </inertial>
+    </link>
+
+    <!-- RIGHT back WHEEL LINK -->
+
+    <joint name="back_right_wheel_joint" type="revolute">
+        <pose>-0.175 -0.33 0 1.571 0.0 0.0</pose>
+        <parent>base_link</parent>
+        <child>back_right_wheel</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+        </axis>
+    </joint>
+
+    <link name="back_right_wheel">
+        <visual name="vis">
+            <pose>-0.175 -0.33 0 1.571 0.0 0.0</pose> 
+            <geometry>
+                <cylinder>
+                  <radius>0.125</radius>
+                  <length>0.04</length>
+                </cylinder>
+            </geometry>
+        </visual>
+        <collision name="col">
+            <pose>-0.175 -0.33 0 1.571 0.0 0.0</pose> 
+            <geometry>
+                <sphere> 
+                  <radius>0.125</radius>
+                </sphere>
+            </geometry>
+        </collision>
+        <inertial>
+			<pose>-0.175 -0.33 0 1.571 0.0 0.0</pose> 
+			<mass>0.1</mass>
+			<inertia>
+				<ixx>0.00818088481028511</ixx>
+				<ixy>-8.31221665572215E-19</ixy>
+				<ixz>-1.63529138250933E-19</ixz>
+				<iyy>0.00818088481028511</iyy>
+				<iyz>5.33492516736472E-17</iyz>
+				<izz>0.0158038579869233</izz>
+          	</inertia>
+	    </inertial>
+    </link>
+
+    <!-- RIGHT front WHEEL LINK -->
+
+    <joint name="front_right_wheel_joint" type="revolute">
+        <pose>0.175 -0.33 0.0 1.571 0.0 0.0</pose>
+	   	 	<parent>base_link</parent>
+        <child>front_right_wheel</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+        </axis>
+    </joint>
+
+    <link name="front_right_wheel">
+        <visual name="vis">
+            <pose>0.175 -0.33 0.0 1.571 0.0 0.0</pose> 
+            <geometry> 
+               <cylinder>
+                  <radius>0.125</radius>
+                  <length>0.04</length>
+                </cylinder>
+            </geometry>
+        </visual>
+        <collision name="col">
+            <pose>0.175 -0.33 0.0 1.571 0.0 0.0</pose> 
+            <geometry>
+                <sphere> 
+                  <radius>0.125</radius>
+                </sphere>
+            </geometry>
+        </collision>
+        <inertial>
+          <pose>0.175 -0.33 0.0 1.571 0.0 0.0</pose> 
+	      
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.00818088481028511</ixx>
+            <ixy>1.55583818346496E-18</ixy>
+            <ixz>-1.57805560009028E-20</ixz>
+            <iyy>0.00818088481028511</iyy>
+            <iyz>2.76541224531879E-17</iyz>
+            <izz>0.0158038579869233</izz>
+          </inertia>
+          </inertial>
+    </link>
+
+    <plugin name="turtlebot3_diff_drive" filename="libgazebo_ros_diff_drive.so">
+
+        <ros>
+          <!-- <namespace>/tb3</namespace> -->
+          <!--since gazebo_plugins publish tf topic in global namespace /tf only and it
+            cannot be remapped like (namespace/tf) through launch arguments -->
+          <remapping>/tf:=tf</remapping>
+        </ros>
+
+        <update_rate>30</update_rate>
+
+        <!-- wheels -->
+        <left_joint>front_left_wheel_joint</left_joint>
+        <right_joint>front_right_wheel_joint</right_joint>
+        <left_joint>back_left_wheel_joint</left_joint>
+        <right_joint>back_right_wheel_joint</right_joint>
+
+        <!-- kinematics -->
+        <wheel_separation>0.730</wheel_separation>
+        <wheel_separation>0.730</wheel_separation>
+
+        <wheel_diameter>0.25</wheel_diameter>
+        <wheel_diameter>0.25</wheel_diameter>
+
+        <num_wheel_pairs>2</num_wheel_pairs>
+        <!-- limits -->
+        <max_wheel_torque>20</max_wheel_torque>
+        <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+        <command_topic>cmd_vel</command_topic>
+
+        <!-- output -->
+        <!-- The odom -> base link transform is published by the ekf in robot localization -->
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>false</publish_odom_tf>
+        <publish_wheel_tf>false</publish_wheel_tf>
+
+        <odometry_topic>odom</odometry_topic>
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>base_footprint</robot_base_frame>
+
+      </plugin>
+
+    <plugin name="turtlebot3_joint_state" filename="libgazebo_ros_joint_state_publisher.so">
+        <ros>
+          <!-- <namespace>/tb3</namespace> -->
+            <remapping>~/out:=joint_states</remapping>
+        </ros>
+        <update_rate>30</update_rate>
+		    <joint_name>front_left_wheel_joint</joint_name>
+        <joint_name>front_right_wheel_joint</joint_name>
+        <joint_name>back_left_wheel_joint</joint_name>
+        <joint_name>back_right_wheel_joint</joint_name>
+
+      </plugin>
+
+    
+
+    </model>
+</sdf>
